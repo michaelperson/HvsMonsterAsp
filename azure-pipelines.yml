@@ -30,5 +30,8 @@ steps:
 
 - task: VSTest@2
   inputs:
+    testSelector: 'testRun'
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    testRunTitle: 'Test HVS'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
