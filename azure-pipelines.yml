@@ -35,3 +35,10 @@ steps:
     testRunTitle: 'Test HVS'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'HvsArtifac'
+    publishLocation: 'Container'
+    StoreAsTar: true
